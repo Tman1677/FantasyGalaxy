@@ -13,7 +13,7 @@
 		<title>Home Page</title>
 	</head>
 
-	<body>
+	<body class="bg-dark">
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 			<a class="navbar-brand" href="#">
 				Tristan's Fantasy Galaxy
@@ -27,25 +27,31 @@
 		  	<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto">
 			 		<li class="nav-item active">
-						<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-			  		</li>
-			  		<li class="nav-item">
-						<a class="nav-link" href="#">Link</a>
+						<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
 			  		</li>
 				  	<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Dropdown
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Apophysis
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						  <a class="dropdown-item" href="#">Action</a>
-						  <a class="dropdown-item" href="#">Another action</a>
-						  <div class="dropdown-divider"></div>
-						  <a class="dropdown-item" href="#">Something else here</a>
+						  <a class="dropdown-item" href="apophysis1.html">Flame 1</a>
+						  <a class="dropdown-item" href="apophysis2.html">Flame 2</a>
 						</div>
 				  	</li>
-				  	<li class="nav-item">
-						<a class="nav-link" href="#">Disabled</a>
+				  	<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Photoshops
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						  <a class="dropdown-item" href="planet1.html">Planet 1</a>
+						  <a class="dropdown-item" href="planet2.html">Planet 2</a>
+						  <a class="dropdown-item" href="star.html">Star</a>
+						  <a class="dropdown-item" href="rainbow.html">Rainbow</a>
+						</div>
 				  	</li>
+			  		<li class="nav-item">
+						<a class="nav-link" href="music.html">Music</a>
+			  		</li>
 				</ul>
 				<!--Search bar- interesting but I probably won't use it
 				<form class="form-inline my-2 my-lg-0">
@@ -58,10 +64,8 @@
 			<div class="row">
 			<!--Note, sm in columns implies device size and scales up, sm is tablets and up-->
 				<div class="col-sm bg-dark text-light">
-				  <p><br>
-			      </p>
-				  <p>Render 1920x1080 apophysis things</p>
-				  <p>Make github repo</p>
+					<iframe src="content.html" height="800px" width="100%"></iframe>
+					This clipping that has no way of dynamically sizing is why modern websites have stopped using iframes - it doesn't play nice with dynamic sizing
 				</div>
 			</div>
 		</div>
