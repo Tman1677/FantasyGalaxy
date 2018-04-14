@@ -4,15 +4,7 @@
 		<meta charset="utf-8">
 		<!--Makes sure touch zooming and stuff works on mobile? Idk but I'll include it-->
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<style>
-			#custom {
-				width: 200px;
-				height: 50px;
-				background: url(images/btn.png) no-repeat scroll 0 0 transparent;
-				text-align: center;
-				vertical-align: middle
-			}
-		</style>
+		<link rel="stylesheet" href="my.css">
 		<!--Begin CSS Imports-->
 		<!-- CSS managed by Bootstrap so I'm not reinventing the wheel -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -23,7 +15,7 @@
 
 <body class="bg-dark">
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-			<a class="navbar-brand" href="#">
+			<a class="navbar-brand" href="index.html">
 				Tristan's Fantasy Galaxy
 			</a>
 			
@@ -72,6 +64,7 @@
 			<div class="row">
 			<!--Note, sm in columns implies device size and scales up, sm is tablets and up-->
 				<div class="col-sm bg-dark text-light">
+				<p></p>
 					<p>
 						Use the Start and Stop buttons below to make your own music - I'm not good with music
 					</p>
@@ -79,13 +72,13 @@
 						<button onclick="document.getElementById('happy').play()" type="button" class="btn btn-light">Start Happy</button>
 						<button onclick="document.getElementById('eerie').play()" type="button" class="btn btn-light">Start Eerie</button>
 						<button onclick="document.getElementById('mournful').play()" type="button" class="btn btn-light">Start Mournful</button>
-						<button onclick="document.getElementById('player').play()" type="button" class="btn btn-light">Start Suspense</button>
+						<button onclick="document.getElementById('suspense').play()" type="button" class="btn btn-light">Start Suspense</button>
 					</p>
 					<p>
 						<button onclick="document.getElementById('happy').pause()" type="button" class="btn btn-light">Stop Happy</button>
 						<button onclick="document.getElementById('eerie').pause()" type="button" class="btn btn-light">Stop Eerie</button>
 						<button onclick="document.getElementById('mournful').pause()" type="button" class="btn btn-light">Stop Mournful</button>
-						<button onclick="document.getElementById('player').pause()" type="button" class="btn btn-light">Stop Suspense</button>
+						<button onclick="document.getElementById('suspense').pause()" type="button" class="btn btn-light">Stop Suspense</button>
 					</p>
 					<p>
 						<div id="custom" class="btn">This does nothing</div>
@@ -94,7 +87,19 @@
 			</div>
 		</div>
 
-
+		
+		<audio id="eerie" controls loop preload="auto" >
+			<source src="music/eerie.mp3">
+		</audio>
+		<audio id="happy" controls loop preload="auto" >
+			<source src="music/happy.mp3">
+		</audio>
+		<audio id="mournful" controls loop preload="auto" >
+			<source src="music/mournful.mp3">
+		</audio>
+		<audio id="suspense" controls loop preload="auto" >
+			<source src="music/suspense.mp3">
+		</audio>
 
 		<!--Begin Javascript Section so it'll load last-->
 		<!--Once again importing Bootstrap, order matters with these three, JQuery, then Popper.js, then Bootstrap-->
